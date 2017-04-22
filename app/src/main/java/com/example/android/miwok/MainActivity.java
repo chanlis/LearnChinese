@@ -15,8 +15,11 @@
  */
 package com.example.android.miwok;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,5 +29,40 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        // Find the View that shows the respective category
+        TextView numberView = (TextView) findViewById(R.id.numbers);
+        TextView familyView = (TextView) findViewById(R.id.family);
+        TextView colorsView = (TextView) findViewById(R.id.colors);
+        TextView phrasesView = (TextView) findViewById(R.id.phrases);
+
+        // Set a ClickListener on that View
+        numberView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create a new Intent to open {@link NumbersActivity}
+                Intent numbersIntent = new Intent (MainActivity.this, NumbersActivity.class);
+                // Start Activity
+                startActivity(numbersIntent);
+            }
+        });
+        familyView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent familyIntent = new Intent (MainActivity.this, FamilyActivity.class);
+            }
+        });
+        colorsView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent colorsIntent = new Intent (MainActivity.this, ColorsActivity.class);
+            }
+        });
+        phrasesView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent phrasesIntent = new Intent (MainActivity.this, PhrasesActivity.class);
+            }
+        });
     }
 }
