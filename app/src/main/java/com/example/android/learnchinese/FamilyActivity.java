@@ -1,13 +1,13 @@
-package com.example.android.miwok;
+package com.example.android.learnchinese;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class NumbersActivity extends AppCompatActivity {
+public class FamilyActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.activity_family);
     }
 }

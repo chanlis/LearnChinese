@@ -14,13 +14,25 @@
 -->
 <resources>
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">Miwok</string>
+    <string name="app_name">Learn Chinese</string>
 
     <!-- Category name for phrases [CHAR LIMIT=20] -->
     <string name="category_phrases">Phrases</string>
 
     <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
     <string name="category_colors">Colors</string>
+    <string name="white_color">white</string>
+    <string name="black_color">black</string>
+    <string name="red_color">red</string>
+    <string name="yellow_color">yellow</string>
+    <string name="green_color">green</string>
+    <string name="blue_color">blue</string>
+    <string name="brown_color">brown</string>
+    <string name="orange_color">orange</string>
+    <string name="grey_color">grey</string>
+    <string name="pink_color">pink</string>
+    <string name="purple_color">purple</string>
+
 
     <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
     <string name="category_numbers">Numbers</string>

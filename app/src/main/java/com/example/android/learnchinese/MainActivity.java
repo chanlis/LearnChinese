@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.miwok;
+package com.example.android.learnchinese;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,18 +50,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent familyIntent = new Intent (MainActivity.this, FamilyActivity.class);
+                startActivity(familyIntent);
             }
         });
         colorsView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent colorsIntent = new Intent (MainActivity.this, ColorsActivity.class);
+                startActivity(colorsIntent);
             }
         });
         phrasesView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent phrasesIntent = new Intent (MainActivity.this, PhrasesActivity.class);
+                startActivity(phrasesIntent);
             }
         });
     }
