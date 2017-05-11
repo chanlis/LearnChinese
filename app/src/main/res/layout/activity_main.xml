@@ -14,6 +14,12 @@
         android:text="@string/category_greetings" />
 
     <TextView
+        android:id="@+id/foods"
+        style="@style/CategoryStyle"
+        android:background="@android:color/black"
+        android:text="@string/category_foods"/>
+
+    <TextView
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
         android:background="@color/category_numbers"

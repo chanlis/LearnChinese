@@ -28,6 +28,33 @@
     <string name="yes_speak_eng_greeting">Yes, I speak English.</string>
     <string name="no_speak_eng_greeting">No, I don\'t speak English.</string>
 
+    <!-- Category name for foods [CHAR LIMIT=20] -->
+    <string name="category_foods">Foods</string>
+    <string name="hungry_foods">hungry</string>
+    <string name="thirsty_food">thirsty</string>
+    <string name="eaten_enough_food">eaten enough</string>
+    <string name="breakfast_food">breakfast</string>
+    <string name="lunch_food">lunch</string>
+    <string name="dinner_food">dinner</string>
+    <string name="bread_food">bread</string>
+    <string name="meat_food">meat</string>
+    <string name="soup_food">soup</string>
+    <string name="fruit_food">fruit</string>
+    <string name="salad_food">salad</string>
+    <string name="tea_food">tea</string>
+    <string name="coffee_food">coffee</string>
+    <string name="french_fries_food">french fries</string>
+    <string name="sausage_food">sausage</string>
+    <string name="cake_food">cake</string>
+    <string name="cheese_food">cheese</string>
+    <string name="apple_food">apple</string>
+    <string name="orange_food">orange</string>
+    <string name="banana_food">banana</string>
+    <string name="sugar_food">sugar</string>
+    <string name="salt_food">salt</string>
+    <string name="pepper_food">pepper</string>
+
+
     <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
     <string name="category_colors">Colors</string>
     <string name="white_color">white</string>

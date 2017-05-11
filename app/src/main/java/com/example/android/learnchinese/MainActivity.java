@@ -23,6 +23,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //TODO: edit colors to make pretty in activity_main.xml and reorder below
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         TextView familyView = (TextView) findViewById(R.id.family);
         TextView colorsView = (TextView) findViewById(R.id.colors);
         TextView phrasesView = (TextView) findViewById(R.id.greetings);
+        TextView foodsview = (TextView) findViewById(R.id.foods);
 
         // Set a ClickListener on that View
         numberView.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +67,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent phrasesIntent = new Intent (MainActivity.this, GreetingsActivity.class);
                 startActivity(phrasesIntent);
+            }
+        });
+        foodsview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent foodsIntent = new Intent(MainActivity.this, FoodsActivity.class);
+                startActivity(foodsIntent);
             }
         });
     }
