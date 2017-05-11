@@ -31,8 +31,8 @@
         </activity>
         <activity android:name="com.example.android.learnchinese.NumbersActivity"
             android:label="@string/category_numbers"/>
-        <activity android:name="com.example.android.learnchinese.PhrasesActivity"
-            android:label="@string/category_phrases"/>
+        <activity android:name="com.example.android.learnchinese.GreetingsActivity"
+            android:label="@string/category_greetings"/>
         <activity android:name="com.example.android.learnchinese.FamilyActivity"
             android:label="@string/category_family"/>
         <activity android:name="com.example.android.learnchinese.ColorsActivity"

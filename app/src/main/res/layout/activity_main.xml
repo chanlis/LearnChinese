@@ -8,6 +8,12 @@
     tools:context="com.example.android.learnchinese.MainActivity">
 
     <TextView
+        android:id="@+id/greetings"
+        style="@style/CategoryStyle"
+        android:background="@color/category_phrases"
+        android:text="@string/category_greetings" />
+
+    <TextView
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
         android:background="@color/category_numbers"
@@ -25,10 +31,5 @@
         android:background="@color/category_colors"
         android:text="@string/category_colors" />
 
-    <TextView
-        android:id="@+id/phrases"
-        style="@style/CategoryStyle"
-        android:background="@color/category_phrases"
-        android:text="@string/category_phrases" />
 
 </LinearLayout>

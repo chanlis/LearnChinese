@@ -16,8 +16,17 @@
     <!-- Title for the application. [CHAR LIMIT=12] -->
     <string name="app_name">Learn Chinese</string>
 
-    <!-- Category name for phrases [CHAR LIMIT=20] -->
-    <string name="category_phrases">Phrases</string>
+    <!-- Category name for greetings [CHAR LIMIT=20] -->
+    <string name="category_greetings">Greetings</string>
+    <string name="hello_greeting">Hello</string>
+    <string name="how_are_you_greeting">How are you?</string>
+    <string name="i_am_fine_greeting">I\'m fine, thank you.</string>
+    <string name="my_name_is_greeting">My name is...</string>
+    <string name="nice_to_meet_you_greeting">Nice to meet you.</string>
+    <string name="goodbye_greeting">Goodbye</string>
+    <string name="speak_eng_question_greeting">Do you speak English?</string>
+    <string name="yes_speak_eng_greeting">Yes, I speak English.</string>
+    <string name="no_speak_eng_greeting">No, I don\'t speak English.</string>
 
     <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
     <string name="category_colors">Colors</string>

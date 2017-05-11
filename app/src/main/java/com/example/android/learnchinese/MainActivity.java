@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         TextView numberView = (TextView) findViewById(R.id.numbers);
         TextView familyView = (TextView) findViewById(R.id.family);
         TextView colorsView = (TextView) findViewById(R.id.colors);
-        TextView phrasesView = (TextView) findViewById(R.id.phrases);
+        TextView phrasesView = (TextView) findViewById(R.id.greetings);
 
         // Set a ClickListener on that View
         numberView.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         phrasesView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent phrasesIntent = new Intent (MainActivity.this, PhrasesActivity.class);
+                Intent phrasesIntent = new Intent (MainActivity.this, GreetingsActivity.class);
                 startActivity(phrasesIntent);
             }
         });
