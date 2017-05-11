@@ -84,5 +84,18 @@
     <string name="ten_numbers">ten</string>
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
-    <string name="category_family">Family Members</string>
+    <string name="category_family">Family</string>
+    <string name="friend_family">friend</string>
+    <string name="son_family">son</string>
+    <string name="daughter_family">daughter</string>
+    <string name="wife_family">wife</string>
+    <string name="husband_family">husband</string>
+    <string name="mother_family">mother</string>
+    <string name="father_family">father</string>
+    <string name="grandma_family">grandma</string>
+    <string name="grandpa_family">grandpa</string>
+    <string name="older_brother_family">older brother</string>
+    <string name="younger_brother_family">younger brother</string>
+    <string name="younger_sister_family">younger sister</string>
+    <string name="older_sister_family">older sister</string>
 </resources>

@@ -26,16 +26,15 @@
         android:text="@string/category_numbers"/>
 
     <TextView
-        android:id="@+id/family"
-        style="@style/CategoryStyle"
-        android:background="@color/category_family"
-        android:text="@string/category_family" />
-
-    <TextView
         android:id="@+id/colors"
         style="@style/CategoryStyle"
         android:background="@color/category_colors"
         android:text="@string/category_colors" />
 
+    <TextView
+        android:id="@+id/family"
+        style="@style/CategoryStyle"
+        android:background="@color/category_family"
+        android:text="@string/category_family" />
 
 </LinearLayout>
