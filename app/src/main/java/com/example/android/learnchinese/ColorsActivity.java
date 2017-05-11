@@ -2,7 +2,6 @@ package com.example.android.learnchinese;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -12,14 +11,15 @@ public class ColorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colors);
+        setContentView(R.layout.words_list);
 
         // list of words for colors
         ArrayList<Word> colors = new ArrayList<Word>();
         initColors(colors);
 
+        // init list view
         WordAdapter adapter = new WordAdapter(this, colors);
-        ListView listView = (ListView) findViewById(R.id.colors_list);
+        ListView listView = (ListView) findViewById(R.id.words_list);
         listView.setAdapter(adapter);
 
     }

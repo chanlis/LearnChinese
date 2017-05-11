@@ -36,6 +36,16 @@
 
     <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
     <string name="category_numbers">Numbers</string>
+    <string name="one_numbers">one</string>
+    <string name="two_numbers">two</string>
+    <string name="three_numbers">three</string>
+    <string name="four_numbers">four</string>
+    <string name="five_numbers">five</string>
+    <string name="six_numbers">six</string>
+    <string name="seven_numbers">seven</string>
+    <string name="eight_numbers">eight</string>
+    <string name="nine_numbers">nine</string>
+    <string name="ten_numbers">ten</string>
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_family">Family Members</string>

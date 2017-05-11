@@ -11,31 +11,40 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.words_list);
 
         // Create a list of words
-        ArrayList<Word> words = new ArrayList<Word>();/*
-        words.add(new Word("one", "hwun"));
-        words.add(new Word("two", "too"));
-        words.add(new Word("three", "theree"));*/
+        ArrayList<Word> numbers = new ArrayList<Word>();
+        initNumbers(numbers);
 
-        // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
-        // adapter knows how to create layouts for each item in the list, using the
-        // simple_list_item_1.xml layout resource defined in the Android framework.
-        // This list item layout contains a single {@link TextView}, which the adapter will set to
-        // display a single word.
-        WordAdapter adapter =
-                new WordAdapter(this, words);
-
-        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // activity_numbers.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.numbers_list);
-
-        // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
-        // {@link ListView} will display list items for each word in the list of words.
-        // Do this by calling the setAdapter method on the {@link ListView} object and pass in
-        // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
+        WordAdapter adapter = new WordAdapter(this, numbers);
+        ListView listView = (ListView) findViewById(R.id.words_list);
         listView.setAdapter(adapter);
+    }
+
+    private final void initNumbers(ArrayList<Word> numbers)
+    {
+        String packageName = getPackageName();
+        numbers.add(new Word(getResources().getString(R.string.one_numbers), "一", "yī",
+                getResources().getIdentifier("one", "raw", packageName)));
+        numbers.add(new Word(getResources().getString(R.string.two_numbers), "二", "èr",
+                getResources().getIdentifier("two", "raw", packageName)));
+        numbers.add(new Word(getResources().getString(R.string.three_numbers), "三", "sān",
+                getResources().getIdentifier("three", "raw", packageName)));
+        numbers.add(new Word(getResources().getString(R.string.four_numbers), "四", "sì",
+                getResources().getIdentifier("four", "raw", packageName)));
+        numbers.add(new Word(getResources().getString(R.string.five_numbers), "五", "wǔ",
+                getResources().getIdentifier("five", "raw", packageName)));
+        numbers.add(new Word(getResources().getString(R.string.six_numbers), "六", "liù",
+                getResources().getIdentifier("six", "raw", packageName)));
+        numbers.add(new Word(getResources().getString(R.string.seven_numbers), "七", "qī",
+                getResources().getIdentifier("seven", "raw", packageName)));
+        numbers.add(new Word(getResources().getString(R.string.eight_numbers), "八", "bā",
+                getResources().getIdentifier("eight", "raw", packageName)));
+        numbers.add(new Word(getResources().getString(R.string.nine_numbers), "九", "jiǔ",
+                getResources().getIdentifier("nine", "raw", packageName)));
+        numbers.add(new Word(getResources().getString(R.string.ten_numbers), "十", "shí",
+                getResources().getIdentifier("ten", "raw", packageName)));
+
     }
 }
