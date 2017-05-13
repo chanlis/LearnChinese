@@ -26,7 +26,6 @@ public class ColorsActivity extends AppCompatActivity {
 
     private void initColors(ArrayList<Word> colors)
     {
-        String packageName = this.getPackageName();
         colors.add(new Word(getString(R.string.white_color), "白色", "bái sè",
                 R.raw.white));
         colors.add(new Word(getString(R.string.black_color), "黑色", "hēi sè",
