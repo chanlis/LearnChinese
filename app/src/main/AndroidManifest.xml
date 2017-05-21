@@ -38,7 +38,7 @@
         <activity android:name="com.example.android.learnchinese.ColorsActivity"
             android:label="@string/category_colors"></activity>
         <activity android:name="com.example.android.learnchinese.FoodsActivity"
-            android:label="Foods"></activity>
+            android:label="@string/category_foods"></activity>
     </application>
 
 </manifest>

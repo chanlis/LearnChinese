@@ -33,7 +33,7 @@ class WordAdapter extends ArrayAdapter<Word> {
 
         // get current word according to array position
         final Word currentWord = getItem(position);
-
+/*
         // set onClickListener on list item
         if(currentWord.getAudioID() >= 0) {
             listItemView.setOnClickListener(new View.OnClickListener()
@@ -45,7 +45,7 @@ class WordAdapter extends ArrayAdapter<Word> {
                     audio.start();
                 }
             });
-        }
+        }*/
 
         // translation view
         TextView translationTextView = (TextView) listItemView.findViewById(R.id.translation_text_view);

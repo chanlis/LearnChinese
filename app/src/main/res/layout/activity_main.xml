@@ -3,38 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tan_background"
+    android:background="@color/light_grey"
     android:orientation="vertical"
     tools:context="com.example.android.learnchinese.MainActivity">
 
     <TextView
         android:id="@+id/greetings"
         style="@style/CategoryStyle"
-        android:background="@color/category_phrases"
         android:text="@string/category_greetings" />
 
     <TextView
         android:id="@+id/foods"
         style="@style/CategoryStyle"
-        android:background="@android:color/black"
         android:text="@string/category_foods"/>
 
     <TextView
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
-        android:background="@color/category_numbers"
         android:text="@string/category_numbers"/>
 
     <TextView
         android:id="@+id/colors"
         style="@style/CategoryStyle"
-        android:background="@color/category_colors"
         android:text="@string/category_colors" />
 
     <TextView
         android:id="@+id/family"
         style="@style/CategoryStyle"
-        android:background="@color/category_family"
         android:text="@string/category_family" />
 
 </LinearLayout>
