@@ -7,29 +7,90 @@
     android:orientation="vertical"
     tools:context="com.example.android.learnchinese.MainActivity">
 
-    <TextView
-        android:id="@+id/greetings"
-        style="@style/CategoryStyle"
-        android:text="@string/category_greetings" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/greetings"
+            style="@style/CategoryStyle"
+            android:text="@string/category_greetings" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp" />
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/foods"
-        style="@style/CategoryStyle"
-        android:text="@string/category_foods"/>
 
-    <TextView
-        android:id="@+id/numbers"
-        style="@style/CategoryStyle"
-        android:text="@string/category_numbers"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/foods"
+            style="@style/CategoryStyle"
+            android:text="@string/category_foods" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp" />
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/colors"
-        style="@style/CategoryStyle"
-        android:text="@string/category_colors" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/numbers"
+            style="@style/CategoryStyle"
+            android:text="@string/category_numbers" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp" />
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/family"
-        style="@style/CategoryStyle"
-        android:text="@string/category_family" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/colors"
+            style="@style/CategoryStyle"
+            android:text="@string/category_colors" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/family"
+            style="@style/CategoryStyle"
+            android:text="@string/category_family" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp" />
+    </RelativeLayout>
 
 </LinearLayout>
