@@ -30,15 +30,20 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.android.learnchinese.NumbersActivity"
-            android:label="@string/category_numbers"/>
+            android:label="@string/category_numbers"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name="com.example.android.learnchinese.GreetingsActivity"
-            android:label="@string/category_greetings"/>
+            android:label="@string/category_greetings"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name="com.example.android.learnchinese.FamilyActivity"
-            android:label="@string/category_family"/>
+            android:label="@string/category_family"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name="com.example.android.learnchinese.ColorsActivity"
-            android:label="@string/category_colors"></activity>
+            android:label="@string/category_colors"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name="com.example.android.learnchinese.FoodsActivity"
-            android:label="@string/category_foods"></activity>
+            android:label="@string/category_foods"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

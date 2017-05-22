@@ -17,8 +17,7 @@ import java.util.ArrayList;
 class WordAdapter extends ArrayAdapter<Word> {
     public static final String TAG = "ArrayAdapter";
 
-    public WordAdapter(Activity context, ArrayList<Word> wordsList)
-    {
+    public WordAdapter(Activity context, ArrayList<Word> wordsList) {
         super(context, 0, wordsList);
     }
 
@@ -26,7 +25,7 @@ class WordAdapter extends ArrayAdapter<Word> {
     public View getView(int position, View convertView, ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }

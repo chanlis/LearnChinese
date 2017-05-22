@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new Intent to open {@link NumbersActivity}
-                Intent numbersIntent = new Intent (MainActivity.this, NumbersActivity.class);
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
                 // Start Activity
                 startActivity(numbersIntent);
             }
@@ -51,28 +51,27 @@ public class MainActivity extends AppCompatActivity {
         familyView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent familyIntent = new Intent (MainActivity.this, FamilyActivity.class);
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
                 startActivity(familyIntent);
             }
         });
         colorsView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent colorsIntent = new Intent (MainActivity.this, ColorsActivity.class);
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
                 startActivity(colorsIntent);
             }
         });
         phrasesView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent phrasesIntent = new Intent (MainActivity.this, GreetingsActivity.class);
+                Intent phrasesIntent = new Intent(MainActivity.this, GreetingsActivity.class);
                 startActivity(phrasesIntent);
             }
         });
         foodsview.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 Intent foodsIntent = new Intent(MainActivity.this, FoodsActivity.class);
                 startActivity(foodsIntent);
             }

@@ -18,45 +18,17 @@ import static com.example.android.learnchinese.R.id.numbers;
  * Created by lisachan on 5/10/17.
  */
 
-public class FoodsActivity extends AppCompatActivity
-{
+public class FoodsActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private AudioManager audioManager;
-
-    // on completion listener used to release media player resource
-    private MediaPlayer.OnCompletionListener completionListener = new MediaPlayer.OnCompletionListener() {
-        @Override
-        public void onCompletion(MediaPlayer mediaPlayer) {
-            releaseMediaPlayer();
-        }
-    };
-
-    private AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
-        @Override
-        public void onAudioFocusChange(int focusChange) {
-            // media paused if audio interupted
-            if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
-                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
-                mediaPlayer.pause();
-                mediaPlayer.seekTo(0);
-                // gaining focus starts audio from media player
-            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
-                mediaPlayer.start();
-                // lost focus releases media player resource
-            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
-                // The AUDIOFOCUS_LOSS case means we've lost audio focus and
-                // Stop playback and clean up resources
-                releaseMediaPlayer();
-            }
-        }
-    };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // enable Up button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // set view to correct xml layout
         setContentView(R.layout.words_list);
-
         // Create and setup audio manager
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
@@ -92,6 +64,34 @@ public class FoodsActivity extends AppCompatActivity
         releaseMediaPlayer();
     }
 
+    // on completion listener used to release media player resource
+    private MediaPlayer.OnCompletionListener completionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            releaseMediaPlayer();
+        }
+    };
+
+    private AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
+        @Override
+        public void onAudioFocusChange(int focusChange) {
+            // media paused if audio interupted
+            if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
+                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                mediaPlayer.pause();
+                mediaPlayer.seekTo(0);
+                // gaining focus starts audio from media player
+            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                mediaPlayer.start();
+                // lost focus releases media player resource
+            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                // The AUDIOFOCUS_LOSS case means we've lost audio focus and
+                // Stop playback and clean up resources
+                releaseMediaPlayer();
+            }
+        }
+    };
+
     // force release when media player is not null to free up resource
     private void releaseMediaPlayer() {
         if (mediaPlayer != null) {
@@ -103,8 +103,7 @@ public class FoodsActivity extends AppCompatActivity
         }
     }
 
-    private void initFoods(ArrayList<Word> foods)
-    {
+    private void initFoods(ArrayList<Word> foods) {
         foods.add(new Word(getString(R.string.hungry_foods), "饿", "è",
                 R.raw.hungry));
         foods.add(new Word(getString(R.string.thirsty_food), "渴", "kě",

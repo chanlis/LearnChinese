@@ -3,6 +3,7 @@ package com.example.android.learnchinese;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,40 +18,13 @@ public class FamilyActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private AudioManager audioManager;
 
-    // on completion listener used to release media player resource
-    private MediaPlayer.OnCompletionListener completionListener = new MediaPlayer.OnCompletionListener() {
-        @Override
-        public void onCompletion(MediaPlayer mediaPlayer) {
-            releaseMediaPlayer();
-        }
-    };
-
-    private AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
-        @Override
-        public void onAudioFocusChange(int focusChange) {
-            // media paused if audio interupted
-            if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
-                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
-                mediaPlayer.pause();
-                mediaPlayer.seekTo(0);
-                // gaining focus starts audio from media player
-            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
-                mediaPlayer.start();
-                // lost focus releases media player resource
-            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
-                // The AUDIOFOCUS_LOSS case means we've lost audio focus and
-                // Stop playback and clean up resources
-                releaseMediaPlayer();
-            }
-        }
-    };
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // enable Up button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // set view to correct xml layout
         setContentView(R.layout.words_list);
-
         // Create and setup audio manager
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
@@ -86,6 +60,34 @@ public class FamilyActivity extends AppCompatActivity {
         releaseMediaPlayer();
     }
 
+    // on completion listener used to release media player resource
+    private MediaPlayer.OnCompletionListener completionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            releaseMediaPlayer();
+        }
+    };
+
+    private AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
+        @Override
+        public void onAudioFocusChange(int focusChange) {
+            // media paused if audio interupted
+            if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
+                    focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                mediaPlayer.pause();
+                mediaPlayer.seekTo(0);
+                // gaining focus starts audio from media player
+            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                mediaPlayer.start();
+                // lost focus releases media player resource
+            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                // The AUDIOFOCUS_LOSS case means we've lost audio focus and
+                // Stop playback and clean up resources
+                releaseMediaPlayer();
+            }
+        }
+    };
+
     // force release when media player is not null to free up resource
     private void releaseMediaPlayer() {
         if (mediaPlayer != null) {
@@ -97,8 +99,7 @@ public class FamilyActivity extends AppCompatActivity {
         }
     }
 
-    private void initFamily(ArrayList<Word> family)
-    {
+    private void initFamily(ArrayList<Word> family) {
         family.add(new Word(getString(R.string.friend_family), "朋友", "péng yǒu",
                 R.raw.friend));
         family.add(new Word(getString(R.string.son_family), "儿子", "ér zi",
